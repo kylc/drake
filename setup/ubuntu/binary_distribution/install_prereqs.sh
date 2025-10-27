@@ -64,7 +64,8 @@ fi
 
 apt-get install ${maybe_yes} --no-install-recommends lsb-release
 
-codename=$(lsb_release -sc)
+# codename=$(lsb_release -sc)
+codename=noble
 
 if ! [[ "${codename}" =~ (jammy|noble) ]]; then
   echo 'ERROR: This script requires Ubuntu 22.04 (Jammy) or 24.04 (Noble)' >&2

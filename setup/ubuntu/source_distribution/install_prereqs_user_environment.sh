@@ -29,7 +29,8 @@ fi
 
 workspace_dir="$(cd "$(dirname "${BASH_SOURCE}")/../../.." && pwd)"
 bazelrc="${workspace_dir}/gen/environment.bazelrc"
-codename=$(lsb_release -sc)
+# codename=$(lsb_release -sc)
+codename=noble
 
 mkdir -p "$(dirname "${bazelrc}")"
 cat > "${bazelrc}" <<EOF

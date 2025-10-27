@@ -95,7 +95,8 @@ wget
 EOF
 )
 
-codename=$(lsb_release -sc)
+# codename=$(lsb_release -sc)
+codename=noble
 
 packages=$(cat "${BASH_SOURCE%/*}/packages-${codename}.txt")
 apt-get install ${maybe_yes} --no-install-recommends ${packages}
